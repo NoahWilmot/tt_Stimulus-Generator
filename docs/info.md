@@ -31,7 +31,7 @@ Frequency requirement : 25 MHz
 
 Pinout:
 
-ui[0]: "gen"
+  ui[0]: "gen"
   ui[1]: ""
   ui[2]: ""
   ui[3]: ""
@@ -40,7 +40,7 @@ ui[0]: "gen"
   ui[6]: ""
   ui[7]: ""
   
-  # Outputs
+  Outputs
   
   uo[0]: "wr_row[0]"
   uo[1]: "wr_row[1]"
@@ -51,7 +51,7 @@ ui[0]: "gen"
   uo[6]: "wr_col[2]"
   uo[7]: "wr_col[3]"
   
-  # Bidirectional pins
+  Bidirectional pins
   
   uio[0]: "wants_ctrl"
   uio[1]: "wr_en"
