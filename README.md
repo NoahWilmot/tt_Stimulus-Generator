@@ -14,7 +14,7 @@ The repository linked above contains information on configuring the entire syste
 
 ## Stimulus Generator (on ASIC)
 
-The Stimulus Generator is a peripheral designed to streamline the pre-game setup. Pressing the generate button populates the grid with a randomised pattern of red and blue tiles. The button can be pressed multiple times, layering new patterns on top of existing ones. The game can then be started as normal.
+The Stimulus Generator is a peripheral designed to streamline the pre-game setup. Pressing the generate button populates the grid with a randomized pattern of red and blue tiles. The button can be pressed multiple times, layering new patterns on top of existing ones. The game can then be started as normal.
 
 - [Read the documentation for the Stimulus Generator (ASIC)](docs/info.md)
 
