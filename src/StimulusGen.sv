@@ -35,7 +35,7 @@ module StimulusGen (
 
     always_ff @(posedge clock, negedge reset_n) begin
         if (~reset_n) begin
-            deb_cnt    <= '0;
+            deb_cnt <= '0;
             gen_stable <= 1'b0;
             gen_pulse  <= 1'b0;
         end 
@@ -43,7 +43,7 @@ module StimulusGen (
             gen_pulse <= 1'b0;
             if (gen_sync[1] != gen_stable) begin
                 if (deb_cnt == DEB_WIDTH'(DEB_WIDTH'(STABLE_CNT) - 1)) begin
-                    deb_cnt    <= '0;
+                    deb_cnt <= '0;
                     gen_stable <= gen_sync[1];
                     if (gen_sync[1]) gen_pulse <= 1'b1;
                 end else begin
@@ -126,22 +126,22 @@ module StimulusGen (
     // FSM Output / Datapath
     always_ff @(posedge clock, negedge reset_n) begin
         if (~reset_n) begin
-            row      <= 4'd0;
-            col      <= 4'd0;
-            cur_color  <= 2'd1;
+            row <= 4'd0;
+            col <= 4'd0;
+            cur_color <= 2'd1;
             wants_ctrl <= 1'b0;
-            wr_en      <= 1'b0;
-            wr_row     <= 4'd0;
-            wr_col     <= 4'd0;
-            wr_data    <= 2'd0;
+            wr_en <= 1'b0;
+            wr_row <= 4'd0;
+            wr_col <= 4'd0;
+            wr_data <= 2'd0;
         end else begin
             wr_en <= 1'b0;
             case (cur_state)
                 IDLE: begin
                     wants_ctrl <= 1'b0;
                     if (gen_pulse) begin
-                        row      <= 4'd0;
-                        col      <= 4'd0;
+                        row <= 4'd0;
+                        col <= 4'd0;
                         cur_color  <= 2'd1; 
                         wants_ctrl <= 1'b1;
                     end
@@ -153,9 +153,9 @@ module StimulusGen (
                         cur_color <= (cur_color == 2'd1) ? 2'd2 : 2'd1;
                     // 1/16 place
                     if (lfsr_val[3:0] == 4'hF) begin
-                        wr_en   <= 1'b1;
-                        wr_row  <= row;
-                        wr_col  <= col;
+                        wr_en <= 1'b1;
+                        wr_row <= row;
+                        wr_col <= col;
                         wr_data <= cur_color;
                     end
                     // Advance position
