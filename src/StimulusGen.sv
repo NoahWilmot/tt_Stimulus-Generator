@@ -16,7 +16,7 @@ module StimulusGen (
     ////////////////////////
     
     localparam int CLK_MHZ = 25;
-    localparam int STABLE_MS = 20; //time button must be stable for
+    localparam int STABLE_MS = 20; // time button must be stable for
     localparam int STABLE_CNT = CLK_MHZ * 1000 * STABLE_MS;
     localparam int DEB_WIDTH = $clog2(STABLE_CNT + 1);
 
