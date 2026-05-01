@@ -20,6 +20,4 @@ The Stimulus Generator is a peripheral designed to streamline the pre-game setup
 
 Please explore the rest of the repository for a look at the hardware description of the Stimulus Generator and the testbench to ensure its functionality.
 
-## Images
-
 
