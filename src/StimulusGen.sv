@@ -11,9 +11,9 @@ module StimulusGen (
     output logic [1:0] wr_data
 );
 
-      ////////////////////////
-     // Debounce gen press //
-    ////////////////////////
+      //////////////////////////
+     //  Debounce gen press  //
+    //////////////////////////
     
     localparam int CLK_MHZ = 25;
     localparam int STABLE_MS = 20; // time button must be stable for
@@ -56,9 +56,9 @@ module StimulusGen (
         end
     end
 
-      /////////////////////////////////////////////
-     // Free Counter to randomize the LFSR seed //
-    /////////////////////////////////////////////
+      ///////////////////////////////////////////////
+     //  Free Counter to randomize the LFSR seed  //
+    ///////////////////////////////////////////////
 
     logic [15:0] free_cnt;
 
