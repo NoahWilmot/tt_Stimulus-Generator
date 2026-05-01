@@ -6,7 +6,7 @@ SIM ?= icarus
 FST ?= -fst # Use more efficient FST format
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = tt_um_Stimulus_Generator.v StimulusGen.sv
+PROJECT_SOURCES = tt_um_Stimulus_Generator_NoahW.v StimulusGen.sv
 
 ifneq ($(GATES),yes)
 
